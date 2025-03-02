@@ -1,0 +1,415 @@
+/* Resetando o estilo padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;  /* Fundo escuro para o site */
+    color: #ddd;  /* Cor de texto suave e clara */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1c1c1c;  /* Fundo escuro */
+    padding: 15px;
+    color: white;
+}
+
+header .logo {
+    font-size: 64px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f1c40f;  /* Logo em branco */
+}
+h1 {
+    font-size: 56px; /* Tamanho do título principal */
+    color: #FFD700; /* Cor dourada */
+    text-align: center; /* Alinhamento centralizado */
+    margin-top: 20px; /* Margem superior para espaçar do topo */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 34px;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #bbb;  /* Links em cinza claro */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f1c40f;  /* Hover dourado */
+}
+.sobre {
+    text-align: center;  /* Centraliza o conteúdo dentro do contêiner */
+}
+.sobre {
+    text-align: center; /* Centraliza o texto */
+}
+
+.imagens {
+    display: flex; /* Flexbox para organizar as duas primeiras imagens */
+    justify-content: flex-start; /* As imagens vão se alinhar à esquerda */
+    gap: 10px; /* Espaçamento entre as duas imagens à esquerda */
+}
+
+.sobre img {
+    display: block; /* As imagens serão blocos, uma embaixo da outra, dentro do contêiner */
+    max-width: 100%; /* Para garantir que as imagens não ultrapassem a largura do contêiner */
+}
+
+.sobre .imagens img {
+    max-width: 45%; /* Ajusta a largura das imagens à esquerda */
+}
+
+.sobre img:last-of-type {
+    float: right; /* A última imagem será flutuada à direita */
+    margin-left: 20px; /* Dá um espaçamento à esquerda da imagem à direita */
+    max-width: 45%; /* Ajusta a largura da imagem à direita */
+}
+
+ul {
+    list-style-type: none; /* Remove os marcadores padrão */
+    padding: 0;
+    display: flex; /* Organiza os itens da lista horizontalmente */
+    justify-content: center; /* Opcional: centraliza os itens horizontalmente */
+    gap: 20px; /* Espaço entre as imagens */
+}
+
+ul li {
+    margin: 0; /* Remove margens desnecessárias */
+}
+
+ul li a img {
+    width: 200px; /* Tamanho da imagem */
+    height: 150px; /* Tamanho da imagem */
+    display: block; /* Remove o espaço em branco abaixo das imagens */
+}
+
+.imagem-container img {
+    display: inline-block;
+    margin-right: 10px; /* Espaçamento entre as imagens */
+    width: 45%; /* Defina o tamanho conforme necessário */
+  }
+ h3{ text-align: justify;
+    position: center;
+}
+
+
+/* Home (Imagem de destaque) */
+.home-banner {
+    background-image: url('im2.jpg');
+    background-size: cover;
+    height: 800px;
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);  /* Adiciona um filtro escuro para contraste */
+}
+
+.home-banner h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.home-banner p {
+    font-size: 18px;
+}
+
+/* Sobre */
+.sobre {
+    padding: 40px;
+    text-align: center;
+    background-color: #181818;  /* Fundo mais escuro */
+}
+
+.sobre h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #f1c40f;  /* Título dourado */
+}
+
+.sobre img {
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Conquistas */
+.conquistas {
+    padding: 40px;
+    background-color: #222;  /* Fundo escuro */
+}
+
+.conquistas h2 {
+    font-size: 28px;
+    text-align: center;
+    color: #f1c40f;  /* Título dourado */
+}
+
+.conquistas ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.conquistas li {
+    text-align: center;
+}
+
+.conquistas img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #444;  /* Bordas discretas */
+}
+
+/* Portfolio */
+.portfolio {
+    padding: 40px;
+    text-align: center;
+    background-color: #181818;  /* Fundo mais escuro */
+}
+
+.portfolio h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #f1c40f;  /* Título dourado */
+}
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 900px;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilo para os vídeos */
+.videos {
+    margin-top: 40px;
+}
+
+.videos video {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+/* Matérias */
+.materias {
+    padding: 40px;
+    background-color: #222;  /* Fundo escuro */
+}
+h2{
+    margin-bottom: 20px; /* Espaço abaixo da primeira div */
+    margin-top: 20px;
+}
+.materias h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f1c40f;  /* Título dourado */
+}
+
+.materias-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.materia {
+    width: 30%;
+    margin-bottom: 20px;
+    background-color: #333;  /* Fundo um pouco mais claro */
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.materia img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.materia h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #f1c40f;  /* Título dourado */
+}
+
+.materia a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.materia p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #bbb;
+}
+
+.materia a:hover {
+    color: #f1c40f;  /* Hover dourado */
+}
+
+/* Contato */
+.contato {
+    padding: 40px;
+    background-color: #121212;  /* Fundo escuro */
+    text-align: center;
+}
+
+.contato form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contato input, .contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;  /* Fundo escuro para inputs */
+    color: #fff;  /* Texto em branco */
+}
+
+.contato button {
+    background-color: #f1c40f;  /* Dourado para o botão */
+    color: #222;  /* Texto escuro */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contato button:hover {
+    background-color: #d4ac0d;  /* Dourado mais escuro ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+    background-color: #1c1c1c;  /* Fundo escuro */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-media a:hover {
+    color: #f1c40f;  /* Hover dourado */
+}
+/* Estilo para o link de WhatsApp */
+.whatsapp-button {
+    text-decoration: none;
+}
+
+.whatsapp-button button {
+    background-color: #25D366;  /* Cor verde do WhatsApp */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button button:hover {
+    background-color: #128C7E;  /* Cor verde mais escura no hover */
+}
+.contato p {
+    font-size: 18px; /* Aumenta o tamanho da fonte do texto */
+    margin-bottom: 10px; /* Adiciona espaço entre os parágrafos */
+}
+
+.contato a {
+    font-size: 18px; /* Aumenta o tamanho da fonte do link */
+    color: #007bff; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.contato a:hover {
+    text-decoration: underline; /* Adiciona sublinhado quando o link é clicado */
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #25D366; /* Cor do botão do WhatsApp */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #128C7E; /* Muda a cor do botão ao passar o mouse */
+}
