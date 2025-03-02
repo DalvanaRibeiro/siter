@@ -19,23 +19,18 @@ header {
 }
 
 header .logo {
-    font-size: 64px;
+    font-size: 32px;
     font-weight: bold;
     text-transform: uppercase;
     color: #f1c40f;  /* Logo em branco */
 }
-h1 {
-    font-size: 56px; /* Tamanho do título principal */
-    color: #FFD700; /* Cor dourada */
-    text-align: center; /* Alinhamento centralizado */
-    margin-top: 20px; /* Margem superior para espaçar do topo */
-}
 
+/* Menu */
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: flex-end;
-    font-size: 34px;
+    font-size: 20px;
 }
 
 header nav ul li {
@@ -52,61 +47,6 @@ header nav ul li a {
 header nav ul li a:hover {
     color: #f1c40f;  /* Hover dourado */
 }
-.sobre {
-    text-align: center;  /* Centraliza o conteúdo dentro do contêiner */
-}
-.sobre {
-    text-align: center; /* Centraliza o texto */
-}
-
-.imagens {
-    display: flex; /* Flexbox para organizar as duas primeiras imagens */
-    justify-content: flex-start; /* As imagens vão se alinhar à esquerda */
-    gap: 10px; /* Espaçamento entre as duas imagens à esquerda */
-}
-
-.sobre img {
-    display: block; /* As imagens serão blocos, uma embaixo da outra, dentro do contêiner */
-    max-width: 100%; /* Para garantir que as imagens não ultrapassem a largura do contêiner */
-}
-
-.sobre .imagens img {
-    max-width: 45%; /* Ajusta a largura das imagens à esquerda */
-}
-
-.sobre img:last-of-type {
-    float: right; /* A última imagem será flutuada à direita */
-    margin-left: 20px; /* Dá um espaçamento à esquerda da imagem à direita */
-    max-width: 45%; /* Ajusta a largura da imagem à direita */
-}
-
-ul {
-    list-style-type: none; /* Remove os marcadores padrão */
-    padding: 0;
-    display: flex; /* Organiza os itens da lista horizontalmente */
-    justify-content: center; /* Opcional: centraliza os itens horizontalmente */
-    gap: 20px; /* Espaço entre as imagens */
-}
-
-ul li {
-    margin: 0; /* Remove margens desnecessárias */
-}
-
-ul li a img {
-    width: 200px; /* Tamanho da imagem */
-    height: 150px; /* Tamanho da imagem */
-    display: block; /* Remove o espaço em branco abaixo das imagens */
-}
-
-.imagem-container img {
-    display: inline-block;
-    margin-right: 10px; /* Espaçamento entre as imagens */
-    width: 45%; /* Defina o tamanho conforme necessário */
-  }
- h3{ text-align: justify;
-    position: center;
-}
-
 
 /* Home (Imagem de destaque) */
 .home-banner {
@@ -241,77 +181,6 @@ ul li a img {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Estilo para os vídeos */
-.videos {
-    margin-top: 40px;
-}
-
-.videos video {
-    width: 80%;
-    max-width: 800px;
-    border-radius: 10px;
-}
-
-/* Matérias */
-.materias {
-    padding: 40px;
-    background-color: #222;  /* Fundo escuro */
-}
-h2{
-    margin-bottom: 20px; /* Espaço abaixo da primeira div */
-    margin-top: 20px;
-}
-.materias h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #f1c40f;  /* Título dourado */
-}
-
-.materias-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.materia {
-    width: 30%;
-    margin-bottom: 20px;
-    background-color: #333;  /* Fundo um pouco mais claro */
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.materia img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.materia h3 {
-    margin-top: 10px;
-    font-size: 20px;
-    color: #f1c40f;  /* Título dourado */
-}
-
-.materia a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-.materia p {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #bbb;
-}
-
-.materia a:hover {
-    color: #f1c40f;  /* Hover dourado */
-}
-
 /* Contato */
 .contato {
     padding: 40px;
@@ -365,6 +234,7 @@ footer .social-media a {
 footer .social-media a:hover {
     color: #f1c40f;  /* Hover dourado */
 }
+
 /* Estilo para o link de WhatsApp */
 .whatsapp-button {
     text-decoration: none;
@@ -385,31 +255,91 @@ footer .social-media a:hover {
 .whatsapp-button button:hover {
     background-color: #128C7E;  /* Cor verde mais escura no hover */
 }
-.contato p {
-    font-size: 18px; /* Aumenta o tamanho da fonte do texto */
-    margin-bottom: 10px; /* Adiciona espaço entre os parágrafos */
+
+/* Ajustes para Responsividade */
+@media (max-width: 768px) {
+    /* Ajuste para cabeçalho */
+    header .logo {
+        font-size: 24px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Ajustes no Banner */
+    .home-banner {
+        padding-top: 50px;
+        height: 600px;
+    }
+
+    .home-banner h1 {
+        font-size: 28px;
+    }
+
+    .home-banner p {
+        font-size: 14px;
+    }
+
+    /* Ajuste no Slider */
+    .slider-container {
+        width: 100%;
+    }
+
+    .slider {
+        flex-direction: column;
+    }
+
+    .slide img {
+        width: 100%;
+    }
+
+    /* Ajuste no Portfolio */
+    .portfolio h2 {
+        font-size: 24px;
+    }
+
+    /* Ajustes no Footer */
+    footer .social-media a {
+        font-size: 14px;
+    }
+
+    /* Ajuste nas imagens */
+    .imagem-container img {
+        width: 100%;
+    }
+
+    .contato input, .contato textarea {
+        padding: 8px;
+    }
+
+    .contato button {
+        width: 100%;
+        font-size: 14px;
+    }
 }
 
-.contato a {
-    font-size: 18px; /* Aumenta o tamanho da fonte do link */
-    color: #007bff; /* Cor do link */
-    text-decoration: none; /* Remove o sublinhado do link */
-}
+@media (max-width: 480px) {
+    /* Ajuste para telas pequenas */
+    .home-banner h1 {
+        font-size: 24px;
+    }
 
-.contato a:hover {
-    text-decoration: underline; /* Adiciona sublinhado quando o link é clicado */
-}
+    .home-banner p {
+        font-size: 12px;
+    }
 
-button {
-    font-size: 16px;
-    padding: 10px 20px;
-    background-color: #25D366; /* Cor do botão do WhatsApp */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+    .contato p {
+        font-size: 16px;
+    }
 
-button:hover {
-    background-color: #128C7E; /* Muda a cor do botão ao passar o mouse */
+    .contato button {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
 }
